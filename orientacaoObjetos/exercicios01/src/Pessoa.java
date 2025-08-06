@@ -1,11 +1,9 @@
 public class Pessoa {
-    String nome;
-    int idade;
+    String textoOlaMundo;
 
-    void fazAniversario() {
-        idade++;
+    //Métodos
+    void exibirNaTela() {
+        System.out.println(textoOlaMundo);
     }
-
-    Pessoa pessoa1 = new Pessoa();
 
 }
