@@ -1,4 +1,5 @@
 import br.com.alura.screenmatch.modelo.Filme;
+import br.com.alura.screenmatch.modelo.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -6,13 +7,9 @@ public class Principal {
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
+        meuFilme.getDuracaoEmMinutos();
 
         Filme meuFilme2 = new Filme();
-        meuFilme2.nome = "Procurando Nemo";
-        meuFilme2.anoDeLancamento = 2003;
-        meuFilme2.duracaoEmMinutos = 180;
-
-        System.out.println(meuFilme2.nome);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
@@ -21,6 +18,13 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacao());
         System.out.println(meuFilme.pegaMedia());
 
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        lost.exibeFichaTecnica();
+        lost.setTemporada(10);
+        lost.setEpisodiosPorTemporada(12);
+        System.out.println("Duração do filme: " + lost.getDuracaoEmMinutos());
     }
 }
 
